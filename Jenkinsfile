@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Borrado previo') {
             steps {
-               sh 'docker build -t prueba Dockerfile' 
+               dir('/var/jenkins_home/workspace/docker2'){
+                  sh 'docker build -t prueba Dockerfile' 
+               }
             }
         }
 
