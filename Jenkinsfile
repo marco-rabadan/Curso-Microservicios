@@ -5,7 +5,7 @@ pipeline {
     }
 
     stages {
-        
+      /*  
         stage('Dependency Check') {
             steps {
                 dir('.'){
@@ -33,6 +33,12 @@ pipeline {
                             -Djacoco.address=127.0.0.1 \
                             -Djacoco.port=10001"
                 }
+            }
+        }
+*/
+        stage('Construir'){
+            steps{
+                sh "mvn clean package"
             }
         }
 
