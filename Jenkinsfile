@@ -18,7 +18,14 @@ pipeline {
                 }
                
             }
+        }*/
+        
+        stage('Construir'){
+            steps{
+                sh "mvn clean package"
+            }
         }
+
 
         stage('Analyze'){
             steps{
@@ -35,12 +42,7 @@ pipeline {
                 }
             }
         }
-*/
-        stage('Construir'){
-            steps{
-                sh "mvn clean package"
-            }
-        }
+
 
         stage('Build'){
             steps{
