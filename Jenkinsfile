@@ -23,7 +23,7 @@ pipeline {
         stage('Analyze'){
             steps{
                 withSonarQubeEnv('MiSonarQube'){
-                    sh "mvn clean package sonar:sonar\
+                    sh "mvn clean package sonar:sonar \
                             -Dsonar.projectKey=21_MyCompany_Microservice \
                             -Dsonar.projectName=21_MyCompany_Microservice \
                             -Dsonar.sources=src/main \
